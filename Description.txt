@@ -1,0 +1,25 @@
+This is a todo list project made with angular framework where i can apply my weeks of learning.
+i have used angular material for the UI and json-server for the backend. 
+i have used api service to fetch the data from the backend and display it on the UI.
+i have used bootstrap for the styling of the UI.
+
+Description:
+    a simple todo list app with basic functionality.
+    the app is made with angular framework and uses local storage to store the tasks.
+    the app is responsive and works on all devices.
+
+Features:
+    - add tasks
+    - delete tasks
+    - edit tasks
+    - clear all tasks
+    - responsive
+    - local storage
+
+Installation:
+    - clone the repo
+    - run npm install
+    - run ng serve
+    - run json-server --watch db.json
+    - open http://localhost:4200/ in your browser
+    - enjoy
