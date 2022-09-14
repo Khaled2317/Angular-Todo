@@ -1,0 +1,68 @@
+<div class="container-fluid bg-light">
+    <div class="container bg-light">
+        <div class="row mt-4" style="min-height:300px">
+            <div class="col"></div>
+            <div class="col-md-6 bg-white shadow rounded-2">
+                <div class="card bg-primary mt-4">
+                    <h5 class="text-white position-relative" style="height: 20px;"><span class="position-absolute top-0 start-50 translate-middle-x">ToDo List</span> </h5>
+                </div>
+
+                <div class="shadow">
+                    <div class="input-group mb-3">
+                        <input type="text" placeholder="Enter your task" class="form-control" name="task" [(ngModel)]="TaskValue">
+                        <button class="btn btn-outline-success" type="button" (click)="addButton()">Add</button>
+                      </div>
+                </div>
+                <div class="f">
+                    <h4 class="text-dark mt-4">Tasks :</h4>
+                    <button class="btn btn-warning clearbtn" (click)="deleteAllButton()">Clear</button>
+                </div>
+                <div style="overflow-y: scroll; height:400px;">
+                    <div class="m-3" *ngFor="let task of TaskList">
+                        <div class="p-2 shadow rounded">
+                            <div class="input-group row ps-3">
+                                <div class="card col-md-9 border-0 mt-1">{{task.task_name}}</div>
+                                <button class="btn btn-primary rounded col-md me-2" (click)="deleteButton(task)">Del</button>
+                                <button class="btn btn-danger rounded col-md" (click)="editView(task)" >Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col"></div>
+            
+            <!-- Modal -->
+            <div class="memodal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit Task</h5>
+                        <button class="btn" type="reset" (click)="hideModal()">X</button>
+                        </div>
+                        <hr>
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <input type="text" placeholder="" class="form-control" name="edit-task" [(ngModel)]="editedTaskValue">
+                                <button class="btn btn-danger" type="button" (click)="editButton()">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+<!-- <script type="text/javascript">
+    console.log("Hello World");
+      var edits = document.getElementsByName("edit");
+      console.log(edits);
+      var modal = document.getElementById("exampleModal");
+      for(var i=0; i<edits.length; i++){
+          edits[i].addEventListener("click", function(){
+              modal.style.display = "block";
+          });
+      }
+  </script> -->

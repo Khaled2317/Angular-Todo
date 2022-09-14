@@ -1,0 +1,20 @@
+.memodal{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #000;
+    z-index: 100;
+    padding: 20px;
+    display: none;
+    margin-top: 20px;
+    width:50%;
+    margin-left: 25%;
+}
+
+.clearbtn{
+    margin-left: auto;
+}
+
+.f{
+    align-items: baseline;
+    display: flex;
+}
